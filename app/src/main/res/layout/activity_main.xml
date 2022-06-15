@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/formView"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/packageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/package_name"
+            />
+
+        <Switch
+            android:id="@+id/customPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/formView"
+            android:layout_marginTop="20dp"
+            android:text="自选导航方案" />
+
+        <RadioGroup
+            android:id="@+id/mapTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/customPlan"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/amap_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/amap_auto"
+                android:text="车机版" />
+
+            <RadioButton
+                android:id="@+id/amap_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="@string/amap_mobile"
+                android:text="手机版" />
+        </RadioGroup>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/formView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="@string/run"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteX="468dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <TextView
+        android:id="@+id/textShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
